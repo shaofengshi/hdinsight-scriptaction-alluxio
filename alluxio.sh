@@ -26,7 +26,7 @@ azure_blob_store_url=`awk '/fs.defaultFS/{getline; print}' /etc/hadoop/conf/core
 HADOOP_AZURE_JAR="`ls /usr/hdp/2.*/hadoop/hadoop-azure-2.7*.jar`"
 HADOOP_COMMON_JAR="`ls /usr/hdp/2.*/hadoop/hadoop-common.jar`" 
 HADOOP_AUTH_JAR="`ls /usr/hdp/2.*/hadoop/hadoop-auth.jar`" 
-azure_storage_version="6.0.0"
+azure_storage_version="6.1.0"
 
 mkdir -p /usr/local
 
