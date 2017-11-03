@@ -31,6 +31,12 @@ info:    hdinsight script-action create command OK
 
 Then you can open a ssh tunnel to the cluster's primary headnode, then visit http://localhost:19999/ on your browser. You will see the Azure blob store files mounted in Alluxio.
 
+![Alluxio on Azure blob store](https://raw.githubusercontent.com/shaofengshi/hdinsight-scriptaction-alluxio/master/alluxio-azure-1.png)
+
+You can browse and check a sample file:
+
+![Alluxio on Azure blob store](https://raw.githubusercontent.com/shaofengshi/hdinsight-scriptaction-alluxio/master/alluxio-azure-2.png)
+
 If error, you can check the detail information in Azure portal.
 
 
