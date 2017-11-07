@@ -10,12 +10,12 @@ You need have an HDInsight cluster at running (with Azure blob store as Hadoop d
 
 This script accepts two parameter: Alluxio version, and memory size allocated to Alluxio in each worker. And it will automatically mount the Azure blob store as Alluxio's underlying file system. 
 
-Here is a sample using 1.6.0 and 2GB as inputs (replace with your resource group and cluster name):
+Here is a sample using 1.6.1 and 2GB as inputs (replace with your resource group and cluster name):
 
 ```
 azure login
 
-azure hdinsight script-action create -g <resource-group> -n alluxio -c <hdinsight_cluster_name> -u https://raw.githubusercontent.com/shaofengshi/hdinsight-scriptaction-alluxio/master/alluxio.sh -t "headnode;workernode" --persistOnSuccess -p "1.6.0 2GB"
+azure hdinsight script-action create -g <resource-group> -n alluxio -c <hdinsight_cluster_name> -u https://raw.githubusercontent.com/shaofengshi/hdinsight-scriptaction-alluxio/master/alluxio.sh -t "headnode;workernode" --persistOnSuccess -p "1.6.1 2GB"
 ```
 
 Ideally it will print the result as below:
