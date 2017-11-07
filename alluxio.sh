@@ -62,6 +62,8 @@ initialize_alluxio () {
   echo "" > conf/masters
   echo "" > conf/workers
 
+  cp core/client/runtime/target/alluxio-core-client-runtime-*-jar-with-dependencies.jar /usr/hdp/2.*/hadoop/
+  cp conf/alluxio-site.properties /etc/hadoop/conf/
 }
 
 
