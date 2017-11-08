@@ -59,6 +59,7 @@ initialize_alluxio () {
   echo "alluxio.user.block.size.bytes.default=128MB" >> ./conf/alluxio-site.properties
   echo "alluxio.underfs.address=${azure_blob_store_url}" >> ./conf/alluxio-site.properties
   echo "alluxio.underfs.hdfs.prefixes=hdfs://,glusterfs:///,maprfs:///,wasb://" >> ./conf/alluxio-site.properties
+  echo "alluxio.user.file.writetype.default=CACHE_THROUGH" >> ./conf/alluxio-site.properties
   echo "alluxio.worker.tieredstore.levels=2" >> ./conf/alluxio-site.properties
   echo "alluxio.worker.tieredstore.level0.alias=MEM" >> ./conf/alluxio-site.properties
   echo "alluxio.worker.tieredstore.level0.dirs.path=/mnt/ramdisk" >> ./conf/alluxio-site.properties
