@@ -59,18 +59,19 @@ initialize_alluxio () {
   echo "alluxio.user.block.size.bytes.default=128MB" >> ./conf/alluxio-site.properties
   echo "alluxio.underfs.address=${azure_blob_store_url}" >> ./conf/alluxio-site.properties
   echo "alluxio.underfs.hdfs.prefixes=hdfs://,glusterfs:///,maprfs:///,wasb://" >> ./conf/alluxio-site.properties
-  echo "alluxio.user.file.writetype.default=CACHE_THROUGH" >> ./conf/alluxio-site.properties
   echo "alluxio.worker.tieredstore.levels=2" >> ./conf/alluxio-site.properties
   echo "alluxio.worker.tieredstore.level0.alias=MEM" >> ./conf/alluxio-site.properties
   echo "alluxio.worker.tieredstore.level0.dirs.path=/mnt/ramdisk" >> ./conf/alluxio-site.properties
   echo "alluxio.worker.tieredstore.level0.dirs.quota=${memory_size}" >> ./conf/alluxio-site.properties
-  echo "alluxio.worker.tieredstore.level0.watermark.high.ratio=0.9" >> ./conf/alluxio-site.properties
-  echo "alluxio.worker.tieredstore.level0.watermark.low.ratio=0.7" >> ./conf/alluxio-site.properties
+  echo "alluxio.worker.tieredstore.level0.watermark.high.ratio=0.8" >> ./conf/alluxio-site.properties
+  echo "alluxio.worker.tieredstore.level0.watermark.low.ratio=0.6" >> ./conf/alluxio-site.properties
   echo "alluxio.worker.tieredstore.level1.alias=HDD" >> ./conf/alluxio-site.properties
   echo "alluxio.worker.tieredstore.level1.dirs.path=/mnt/alluxio-hdd1,/alluxio-hdd2" >> ./conf/alluxio-site.properties
   echo "alluxio.worker.tieredstore.level1.dirs.quota=100GB,200GB" >> ./conf/alluxio-site.properties
   echo "alluxio.worker.tieredstore.level1.watermark.high.ratio=0.9" >> ./conf/alluxio-site.properties
   echo "alluxio.worker.tieredstore.level1.watermark.low.ratio=0.7" >> ./conf/alluxio-site.properties
+  echo "alluxio.user.file.writetype.default=CACHE_THROUGH" >> ./conf/alluxio-site.properties
+  echo "alluxio.user.file.metadata.load.type=Always" >> ./conf/alluxio-site.properties
  
   cp /etc/hadoop/conf/core-site.xml conf/
   echo "" > conf/masters

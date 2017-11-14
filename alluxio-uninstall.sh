@@ -30,5 +30,7 @@ else
 fi
 
 cd / && rm -rf /usr/local/alluxio
+rm -rf /mnt/alluxio-hdd1
+rm -rf /alluxio-hdd2
 
 
