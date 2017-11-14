@@ -70,7 +70,7 @@ initialize_alluxio () {
   echo "alluxio.worker.tieredstore.level1.dirs.quota=100GB,200GB" >> ./conf/alluxio-site.properties
   echo "alluxio.worker.tieredstore.level1.watermark.high.ratio=0.9" >> ./conf/alluxio-site.properties
   echo "alluxio.worker.tieredstore.level1.watermark.low.ratio=0.7" >> ./conf/alluxio-site.properties
-  echo "alluxio.user.file.writetype.default=CACHE_THROUGH" >> ./conf/alluxio-site.properties
+  echo "alluxio.user.file.writetype.default=THROUGH" >> ./conf/alluxio-site.properties
   echo "alluxio.user.file.metadata.load.type=Always" >> ./conf/alluxio-site.properties
  
   cp /etc/hadoop/conf/core-site.xml conf/
@@ -111,5 +111,6 @@ else
 
 fi
 
-
+mkdir -p /etc/alluxio
+ln -s /usr/local/alluxio/conf/alluxio-site.properties /etc/alluxio/alluxio-site.properties
 
